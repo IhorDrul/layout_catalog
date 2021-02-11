@@ -11,7 +11,7 @@
     height: $card-img-height + 2 * $card-image-border-size;
     margin: (15px - $card-image-border-size) auto;
     border: $card-image-border-size solid transparent;
-    transition: transform 1s, border 1s;
+    transition: transform 1s;
 
     &:hover {
       transform: scale(1.2, 1.2);
