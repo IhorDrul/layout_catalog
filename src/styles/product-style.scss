@@ -9,13 +9,14 @@
   &__img {
     width: $card-img-width + 2 * $card-image-border-size;
     height: $card-img-height + 2 * $card-image-border-size;
-    margin: (15px - $card-image-border-size) auto;
+    padding: (15px - $card-image-border-size) 0;
+    margin: 0 auto;
     border: $card-image-border-size solid transparent;
     transition: transform 1s;
 
     &:hover {
       transform: scale(1.2, 1.2);
-      border: $card-image-border-size solid #f3f3f3;
+      border-color: #f3f3f3;
     }
   }
 
