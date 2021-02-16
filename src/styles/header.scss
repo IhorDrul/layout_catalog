@@ -1,6 +1,6 @@
 .header {
-  @include header-flex-props;
-  justify-content: space-between;
+  @include grid-props;
+  grid-template-columns: 1fr 8fr;
   height: 60px;
   padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
