@@ -48,10 +48,12 @@
     background-image: url("../images/star.svg");
     background-position: center;
     background-repeat: no-repeat;
-  }
 
-  &__star--active {
-    background-image: url("../images/star-active.svg");
+    @for $i from 1 through 5 {
+      &--#{$i}:nth-child(#{$i}) {
+        background-image: url("../images/star-active.svg");
+      }
+    }
   }
 
   &__feedback-counter {
