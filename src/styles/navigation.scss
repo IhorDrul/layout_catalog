@@ -1,12 +1,15 @@
 .nav {
-  @include header-flex-props;
+  display: grid;
+  align-items: center;
+  justify-self: end;
   height: 100%;
   font-size: 12px;
   text-transform: uppercase;
 
   &__list {
     padding: 0;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
     width: 100%;
     list-style-type: none;
   }

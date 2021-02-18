@@ -1,5 +1,5 @@
-@mixin card-flex-props {
-  display: flex;
+@mixin grid-props {
+  display: grid;
   justify-content: space-between;
   align-items: center;
 }
@@ -8,9 +8,4 @@
   margin: 0;
   font-weight: 400;
   font-size: 11px;
-}
-
-@mixin header-flex-props {
-  display: flex;
-  align-items: center;
 }

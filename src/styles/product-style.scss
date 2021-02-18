@@ -1,6 +1,5 @@
 .product {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   width: $card-width;
   padding: 15px 14px;
   border: 1px solid $card-border-color;
@@ -33,36 +32,42 @@
   }
 
   &__review {
-    @include card-flex-props;
+    @include grid-props;
+    grid-template-columns: 3fr 2fr;
     margin-top: 15px;
   }
 
-  &__rating {
-    display: flex;
+  &__stars {
+    display: grid;
+    grid-template-columns: repeat(5, 19px);
+
+    &--star {
+      width: 15px;
+      height: 15px;
+      background-image: url("../images/star.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    @for $i from 1 through 5 {
+      &--#{$i} &--star:nth-child(-n + #{$i}) {
+        background-image: url("../images/star-active.svg");
+      }
+    }
   }
 
-  &__star {
-    width: 15px;
-    height: 15px;
-    background-image: url("../images/star.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  &__star:not(:last-child) {
-    margin-right: 4px;
-  }
-
-  &__star--active {
-    background-image: url("../images/star-active.svg");
+  &__feedback-counter {
+    justify-self: end;
   }
 
   &__price {
-    @include card-flex-props;
+    @include grid-props;
+    grid-template-columns: repeat(2, 1fr);
     margin: 20px 0;
   }
 
   &__cost {
+    justify-self: end;
     font-size: 16px;
     font-weight: 700;
   }
