@@ -37,20 +37,20 @@
     margin-top: 15px;
   }
 
-  &__rating {
+  &__stars {
     display: grid;
     grid-template-columns: repeat(5, 19px);
-  }
 
-  &__star {
-    width: 15px;
-    height: 15px;
-    background-image: url("../images/star.svg");
-    background-position: center;
-    background-repeat: no-repeat;
+    &--star {
+      width: 15px;
+      height: 15px;
+      background-image: url("../images/star.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
     @for $i from 1 through 5 {
-      &--#{$i}:nth-child(#{$i}) {
+      &--#{$i} &--star:nth-child(-n + #{$i}) {
         background-image: url("../images/star-active.svg");
       }
     }
